@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import AsycStorage from "@react-native-async-storage/async-storage";
 
+import Controller from "./bottomnavigation/Controller";
 import Onboarding from "./components/Onboarding";
 import HomeScreen from "./components/HomeScreen";
 
@@ -38,11 +38,11 @@ export default App = () => {
       {loading ? (
         <Loading />
       ) : viewdOnboarding ? (
-        <HomeScreen />
+        <Controller />
       ) : (
+        // <HomeScreen />
         <Onboarding />
       )}
-      <StatusBar style="auto" />
     </View>
   );
 };

@@ -6,6 +6,7 @@ export default HomeScreen = () => {
   const clearOnboarding = async () => {
     try {
       await AsycStorage.removeItem("@viewedOnboarding");
+      console.log("Onboarding Cleared");
     } catch (e) {
       console.log(e);
     }
