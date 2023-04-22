@@ -19,7 +19,7 @@ const vr = "Vr";
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default Controller = () => {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -66,4 +66,4 @@ export default function App() {
       </Tab.Navigator>
     </NavigationContainer>
   );
-}
+};

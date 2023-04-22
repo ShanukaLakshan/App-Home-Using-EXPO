@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import {  View, ActivityIndicator } from "react-native";
 import AsycStorage from "@react-native-async-storage/async-storage";
 
 import Controller from "./bottomnavigation/Controller";
 import Onboarding from "./components/Onboarding";
-import HomeScreen from "./components/HomeScreen";
 
 const Loading = () => {
   <View>
@@ -34,24 +33,14 @@ export default App = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <>
       {loading ? (
         <Loading />
       ) : viewdOnboarding ? (
         <Controller />
       ) : (
-        // <HomeScreen />
         <Onboarding />
       )}
-    </View>
+    </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
